@@ -1,0 +1,5 @@
+10
+11
+2
+128 ../input/pumpkin.bin
+512 ../input/dog.bin

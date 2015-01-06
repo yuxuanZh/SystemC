@@ -1,0 +1,34 @@
+#ifndef __DODEBAYER_H__
+#define __DODEBAYER_H__
+
+#include "systemc.h"
+#include "tlm.h"
+using namespace tlm;
+
+/*template <typename T1, typename T2>
+class REQ {
+ public:
+  T1 fact1;
+  T2 fact2;
+};
+*/
+/*template <typename T1>
+T1 bayer;
+*/
+template <typename T1, typename T2>
+class doDebayer : public sc_module,
+              public virtual tlm_transport_if<T1,T2> {
+ public:
+  T1 bayer;
+/*  sc_in<bool> clk;
+  sc_in<bool> rst;*/
+  sc_export<tlm_transport_if<T1, T2> > debayer_slave;
+
+  T2 transport(const T1 &);
+
+   SC_CTOR(doDebayer) {
+     debayer_slave(*this);
+   }
+};
+//#include "myMul.cpp"
+#endif

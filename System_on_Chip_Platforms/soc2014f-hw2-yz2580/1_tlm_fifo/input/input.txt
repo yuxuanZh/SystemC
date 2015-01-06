@@ -1,0 +1,10 @@
+10
+11
+70
+20 ../input/dog.bin
+30 ../input/duck.bin
+40 ../input/maple.bin
+50 ../input/tiger.bin
+60 ../input/airplane.bin
+70 ../input/fire.bin
+80 ../input/fire.bin

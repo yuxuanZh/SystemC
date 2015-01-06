@@ -1,0 +1,6 @@
+30 ../input/0000.bin
+40 ../input/0001.bin
+50 ../input/0002.bin
+60 ../input/0003.bin
+70 ../input/0004.bin
+80 ../input/0005.bin

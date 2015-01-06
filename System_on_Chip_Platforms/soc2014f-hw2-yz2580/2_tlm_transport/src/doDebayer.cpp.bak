@@ -1,0 +1,14 @@
+#include "doDebayer.h"
+#include "wami_debayer.h"
+
+template <typename T1, typename T2>  
+T2 doDebayer<T1, T2>::transport(const T1 & bayer)
+{
+  //cout << "Multiplicate @" << sc_time_stamp() << endl;
+  //return ((T3)factors.fact1 * (T3)factors.fact2);
+  T2 tmpdebayered;
+ DODEBYER:
+  wami_debayer(tmpdebayered,bayer);
+  return(tmpdebayered);
+}
+

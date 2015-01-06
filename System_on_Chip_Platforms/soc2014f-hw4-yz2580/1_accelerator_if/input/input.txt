@@ -1,0 +1,6 @@
+10
+11
+1
+512 ../input/dog.bin
+2048 ../input/rainbow.bin
+1024 ../input/lion.bin

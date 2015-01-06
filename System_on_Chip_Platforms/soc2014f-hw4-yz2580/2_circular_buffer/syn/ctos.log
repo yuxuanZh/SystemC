@@ -1,0 +1,476 @@
+                         Cadence C-to-Silicon Compiler
+           Version 14.10-p100  (64 bit), build 50398 Tue, 27 May 2014
+
+Copyright notice: Copyright 2006-2014 Cadence Design Systems, Inc. All rights
+reserved worldwide.
+
+Patent notice: Protected by U.S. Patents 7472361, 7587687, 7673259, 7711536,
+8458630; other U.S. patents pending.
+
+    Date: Wed Nov 12 20:47:04 2014
+    Command:  /opt/cad/ctos/tools/ctos/bin/64bit/ctos debayer_fpga.tcl 
+Setting implementation type to FPGA automatically sets the default pragma keyword name to 'synthesis'. Use verilog_pragma_keyword design attribute to override this setting.
+[Front-end] Parsing ../src/debayer.cpp ...
+[SystemC Elaborator] Elaborating design in flat mode ...
+Transforming loop 'for_ln662' to a do-while loop
+The design has 1 module(s), 7 array(s), 4 process(es), and 12 function(s).
+Inlining functions in Flex Channel library...
+Inlining 'reset_get' function(s).
+Inlining function 'reset_get'
+Inlining 'get' function(s).
+Inlining function 'get'
+Inlining 'get_0' function(s).
+Inlining function 'get_0'
+Inlining 'reset_put' function(s).
+Inlining function 'reset_put'
+Inlining 'put' function(s).
+Inlining function 'put'
+Creating protocol region FLEX_B_GET_START from 'FLEX_B_GET_START' to 'FLEX_B_GET_END'
+Created protocol region FLEX_B_GET_START from 'FLEX_B_GET_START' to 'FLEX_B_GET_END' in  'debayer_load_input'.
+Creating protocol region FLEX_B_GET_START_0 from 'FLEX_B_GET_START_0' to 'FLEX_B_GET_END_0'
+Created protocol region FLEX_B_GET_START_0 from 'FLEX_B_GET_START_0' to 'FLEX_B_GET_END_0' in  'debayer_load_input'.
+Creating protocol region FLEX_B_PUT_START from 'FLEX_B_PUT_START' to 'FLEX_B_PUT_END'
+Created protocol region FLEX_B_PUT_START from 'FLEX_B_PUT_START' to 'FLEX_B_PUT_END' in  'debayer_store_output'.
+Creating protocol region FLEX_B_PUT_START_0 from 'FLEX_B_PUT_START_0' to 'FLEX_B_PUT_END_0'
+Created protocol region FLEX_B_PUT_START_0 from 'FLEX_B_PUT_START_0' to 'FLEX_B_PUT_END_0' in  'debayer_store_output'.
+Writing Post-Build Verilog Simulation Model:
+write_sim -type verilog -suffix _post_build -birthday -dir ./model_unisim /designs/debayer_unisim/modules/debayer.
+Writing Verification Wrapper:
+write_wrapper -o ./model_unisim/debayer_ctos_wrapper.h /designs/debayer_unisim/modules/debayer.
+Adding 1 state(s) after edge 'while_ln799' of behavior 'debayer_process_debayer'.
+Adding 1 state(s) after edge 'while_ln715' of behavior 'debayer_load_input'.
+Adding 1 state(s) after edge 'if_ln897_1' of behavior 'debayer_store_output'.
+Inlining function 'wami_debayer'
+Allocating 2044x16 array 'debayer_img_pong_r' to 2044x16 builtin RAM 'ram_2044x16_1ar_1w'.
+Allocating 2044x16 array 'debayer_img_pong_g' to 2044x16 builtin RAM 'ram_2044x16_1ar_1w'.
+Allocating 2044x16 array 'debayer_img_pong_b' to 2044x16 builtin RAM 'ram_2044x16_1ar_1w'.
+Allocating 2044x16 array 'debayer_img_ping_r' to 2044x16 builtin RAM 'ram_2044x16_1ar_1w'.
+Allocating 2044x16 array 'debayer_img_ping_g' to 2044x16 builtin RAM 'ram_2044x16_1ar_1w'.
+Allocating 2044x16 array 'debayer_img_ping_b' to 2044x16 builtin RAM 'ram_2044x16_1ar_1w'.
+Allocating 12288x16 array 'bayer_img' to 12288x16 builtin RAM 'ram_12288x16_1ar_1w'.
+Starting final optimization of module 'debayer'.
+Analyzing array dependencies on module 'debayer' for array 'bayer_img' with 2 ops.
+Created 1 array dependencies between 2 array ops in behavior 'debayer_load_input'.
+Analyzing array dependencies on module 'debayer' for array 'debayer_img_ping_r' with 1 ops.
+Analyzing array dependencies on module 'debayer' for array 'debayer_img_ping_g' with 1 ops.
+Analyzing array dependencies on module 'debayer' for array 'debayer_img_ping_b' with 1 ops.
+Analyzing array dependencies on module 'debayer' for array 'debayer_img_pong_r' with 1 ops.
+Analyzing array dependencies on module 'debayer' for array 'debayer_img_pong_g' with 1 ops.
+Analyzing array dependencies on module 'debayer' for array 'debayer_img_pong_b' with 1 ops.
+No dependencies found between 6 array ops in 'debayer_store_output'.
+Analyzing array dependencies on module 'debayer' for array 'bayer_img' with 8 ops.
+Analyzing array dependencies on module 'debayer' for array 'debayer_img_pong_r' with 4 ops.
+Analyzing array dependencies on module 'debayer' for array 'debayer_img_ping_r' with 4 ops.
+Analyzing array dependencies on module 'debayer' for array 'debayer_img_pong_g' with 4 ops.
+Analyzing array dependencies on module 'debayer' for array 'debayer_img_ping_g' with 4 ops.
+Analyzing array dependencies on module 'debayer' for array 'debayer_img_pong_b' with 4 ops.
+Analyzing array dependencies on module 'debayer' for array 'debayer_img_ping_b' with 4 ops.
+Set number of independent loop iterations 1 for array 'bayer_img' in loop 'for_ln468'.
+Set number of independent loop iterations 1 for array 'bayer_img' in loop 'for_ln453'.
+Set number of independent loop iterations 1 for array 'bayer_img' in loop 'for_ln437'.
+Set number of independent loop iterations 1 for array 'bayer_img' in loop 'for_ln420'.
+Created 12 array dependencies between 32 array ops in behavior 'debayer_process_debayer'.
+Analyzing array dependencies on module 'debayer' for array 'bayer_img' with 9 ops.
+No dependencies found between 9 array ops in 'interp_G_at_RRR_or_G_at_BBB'.
+Analyzing array dependencies on module 'debayer' for array 'bayer_img' with 11 ops.
+No dependencies found between 11 array ops in 'interp_R_at_GRB_or_B_at_GBR'.
+Analyzing array dependencies on module 'debayer' for array 'bayer_img' with 11 ops.
+No dependencies found between 11 array ops in 'interp_R_at_GBR_or_B_at_GRB'.
+Analyzing array dependencies on module 'debayer' for array 'bayer_img' with 9 ops.
+No dependencies found between 9 array ops in 'interp_R_at_BBB_or_B_at_RRR'.
+==============================================================================
+Creating required states for behavior: 'debayer_config_debayer'
+Edge 'doFork_ln618_1' is being split to allow possible latency increase.
+
+Edge                	Add State Reason
+------------------------------------------------------------------------------
+doFork_ln618_1      	Sequentionally separate loop while_ln627
+
+Created 1 additional state in behavior 'debayer_config_debayer'
+==============================================================================
+Creating required states for behavior: 'debayer_load_input'
+Edge 'doFork_ln652_1' is being split to allow possible latency increase.
+Edge 'forFork_ln674_1' is being split to allow possible latency increase.
+Edge 'forFork_ln719_1' is being split to allow possible latency increase.
+	Sequential ops = 2  Array ops = 2
+
+Edge                	Add State Reason
+------------------------------------------------------------------------------
+doFork_ln652_1      	Sequentionally separate loop for_ln662
+for_ln662           	Sequentionally separate loop do_ln666
+doFork_ln666_1      	Sequentionally separate loop do_ln670
+doFork_ln670_1      	Sequentionally separate loop for_ln674
+forFork_ln662_1     	Sequentionally separate loop LOAD_INPUT_WHILE_while_begin
+LOAD_INPUT_WHILE_while_begin	Sequentionally separate loop do_ln696
+doFork_ln696_1      	Sequentionally separate loop do_ln706
+doFork_ln706_1      	Sequentionally separate loop do_ln710
+doFork_ln710_1      	Sequentionally separate loop while_ln715
+whileFork_ln715_1   	Sequentionally separate loop for_ln719
+forFork_ln719_1     	Sequentionally separate loop do_ln741
+
+Created 11 additional states in behavior 'debayer_load_input'
+==============================================================================
+Creating required states for behavior: 'debayer_store_output'
+Edge 'doFork_ln848_1' is being split to allow possible latency increase.
+Edge 'forFork_ln893_1' is being split to allow possible latency increase.
+	Sequential ops = 0  Array ops = 6
+
+Edge                	Add State Reason
+------------------------------------------------------------------------------
+doFork_ln848_1      	Sequentionally separate loop STORE_OUTPUT_WHILE_while_begin
+STORE_OUTPUT_WHILE_while_begin	Sequentionally separate loop do_ln859
+doFork_ln859_1      	Sequentionally separate loop do_ln865
+doFork_ln865_1      	Sequentionally separate loop do_ln873
+doFork_ln873_1      	Sequentionally separate loop do_ln881
+doFork_ln881_1      	Sequentionally separate loop do_ln887
+doFork_ln887_1      	Sequentionally separate loop for_ln893
+
+Created 7 additional states in behavior 'debayer_store_output'
+==============================================================================
+Creating required states for behavior: 'debayer_process_debayer'
+Edge 'doFork_ln779_1' is being split to allow possible latency increase.
+	Sequential ops = 32  Array ops = 32
+
+Edge                	Add State Reason
+------------------------------------------------------------------------------
+doFork_ln767_1      	Sequentionally separate loop DEBAYER_WHILE_while_begin
+DEBAYER_WHILE_while_begin	Sequentionally separate loop do_ln775
+doFork_ln775_1      	Sequentionally separate loop do_ln779
+doFork_ln779_1      	Sequentionally separate loop do_ln788
+doFork_ln788_1      	Sequentionally separate loop while_ln799
+whileFork_ln799_1   	Sequentionally separate loop for_ln420
+forFork_ln420_1     	Sequentionally separate loop for_ln437
+forFork_ln437_1     	Sequentionally separate loop for_ln453
+forFork_ln453_1     	Sequentionally separate loop for_ln468
+forFork_ln468_1     	Sequentionally separate loop for_ln485
+forFork_ln485_0     	Sequentionally separate loop interp_G_at_RRR_or_G_at_BBB_funcCallJoin_ln488
+forFork_ln485_1     	Sequentionally separate loop for_ln502
+forFork_ln502_0     	Sequentionally separate loop interp_G_at_RRR_or_G_at_BBB_funcCallJoin_ln505
+forFork_ln502_1     	Sequentionally separate loop for_ln517
+forFork_ln517_0     	Sequentionally separate loop interp_R_at_GRB_or_B_at_GBR_funcCallJoin_ln520
+forFork_ln517_1     	Sequentionally separate loop for_ln532
+forFork_ln532_0     	Sequentionally separate loop interp_R_at_GRB_or_B_at_GBR_funcCallJoin_ln535
+forFork_ln532_1     	Sequentionally separate loop for_ln547
+forFork_ln547_0     	Sequentionally separate loop interp_R_at_GBR_or_B_at_GRB_funcCallJoin_ln550
+forFork_ln547_1     	Sequentionally separate loop for_ln562
+forFork_ln562_0     	Sequentionally separate loop interp_R_at_GBR_or_B_at_GRB_funcCallJoin_ln565
+forFork_ln562_1     	Sequentionally separate loop for_ln578
+forFork_ln578_0     	Sequentionally separate loop interp_R_at_BBB_or_B_at_RRR_funcCallJoin_ln581
+forFork_ln578_1     	Sequentionally separate loop for_ln593
+forFork_ln593_0     	Sequentionally separate loop interp_R_at_BBB_or_B_at_RRR_funcCallJoin_ln596
+forFork_ln593_1     	Sequentionally separate loop do_ln822
+
+Created 26 additional states in behavior 'debayer_process_debayer'
+==============================================================================
+Creating required states for behavior: 'interp_G_at_RRR_or_G_at_BBB'
+	Sequential ops = 9  Array ops = 9
+
+Edge                	Add State Reason
+------------------------------------------------------------------------------
+Wait_ln146          	Sequential function return cycle (memread_debayer_bayer_img_ln147)
+
+Created 1 additional state in behavior 'interp_G_at_RRR_or_G_at_BBB'
+==============================================================================
+Creating required states for behavior: 'interp_R_at_GRB_or_B_at_GBR'
+	Sequential ops = 11  Array ops = 11
+
+Edge                	Add State Reason
+------------------------------------------------------------------------------
+Wait_ln224          	Sequential function return cycle (memread_debayer_bayer_img_ln225)
+
+Created 1 additional state in behavior 'interp_R_at_GRB_or_B_at_GBR'
+==============================================================================
+Creating required states for behavior: 'interp_R_at_GBR_or_B_at_GRB'
+	Sequential ops = 11  Array ops = 11
+
+Edge                	Add State Reason
+------------------------------------------------------------------------------
+Wait_ln303          	Sequential function return cycle (memread_debayer_bayer_img_ln304)
+
+Created 1 additional state in behavior 'interp_R_at_GBR_or_B_at_GRB'
+==============================================================================
+Creating required states for behavior: 'interp_R_at_BBB_or_B_at_RRR'
+	Sequential ops = 9  Array ops = 9
+
+Edge                	Add State Reason
+------------------------------------------------------------------------------
+Wait_ln387          	Sequential function return cycle (memread_debayer_bayer_img_ln388)
+
+Created 1 additional state in behavior 'interp_R_at_BBB_or_B_at_RRR'
+Creating initial resources for 14 shareable ops in behavior 'debayer_load_input'.
+Created 14 shareable resources for behavior 'debayer_load_input'.
+Creating initial resources for 5 shareable ops in behavior 'debayer_store_output'.
+Created 5 shareable resources for behavior 'debayer_store_output'.
+Creating initial resources for 46 shareable ops in behavior 'debayer_process_debayer'.
+Created 46 shareable resources for behavior 'debayer_process_debayer'.
+Creating initial resources for 25 shareable ops in behavior 'interp_G_at_RRR_or_G_at_BBB'.
+Created 25 shareable resources for behavior 'interp_G_at_RRR_or_G_at_BBB'.
+Creating initial resources for 30 shareable ops in behavior 'interp_R_at_GRB_or_B_at_GBR'.
+Created 30 shareable resources for behavior 'interp_R_at_GRB_or_B_at_GBR'.
+Creating initial resources for 30 shareable ops in behavior 'interp_R_at_GBR_or_B_at_GRB'.
+Created 30 shareable resources for behavior 'interp_R_at_GBR_or_B_at_GRB'.
+Creating initial resources for 30 shareable ops in behavior 'interp_R_at_BBB_or_B_at_RRR'.
+Created 30 shareable resources for behavior 'interp_R_at_BBB_or_B_at_RRR'.
+Design Attributes: 
+	default_scheduling_effort = low
+==============================================================================
+Scheduling behavior: 'debayer_config_debayer'.
+	Clock = clk  Period = 20000ps
+	Total Ops = 11  Shareable Ops = 0
+	scheduling_effort = low
+	enable_addsubs = false
+	relax_latency = true
+	schedule_slack_margin = -236
+	timing_criticality = auto (medium)
+
+Memory Phase
+Pass 	Slack     	%ops 	Edge         	Action/Status
+------------------------------------------------------------------------------
+   1	N/A       	100.00%	----		Memory phase completed.
+
+Timing Phase
+Pass 	Slack     	%ops 	Edge         	Action/Status
+------------------------------------------------------------------------------
+   1	> 0       	100.00%	----		Timing phase completed.
+
+Scheduling completed.
+WARNING (CTOS-20406):  A user defined state 'Wait_ln628' at ../src/debayer.cpp:628:3 does not contain any scheduled operations and is redundant.
+Starting post-scheduler optimizations on behavior 'debayer_config_debayer'.
+Completed post-scheduler optimizations on behavior 'debayer_config_debayer'.
+==============================================================================
+Scheduling behavior: 'debayer_load_input'.
+	Clock = clk  Period = 20000ps
+	Total Ops = 108  Shareable Ops = 17
+	scheduling_effort = low
+	enable_addsubs = false
+	relax_latency = true
+	schedule_slack_margin = -236
+	timing_criticality = auto (medium)
+
+Memory Phase
+Pass 	Slack     	%ops 	Edge         	Action/Status
+------------------------------------------------------------------------------
+   1	N/A       	100.00%	----		Memory phase completed.
+
+Timing Phase
+Pass 	Slack     	%ops 	Edge         	Action/Status
+------------------------------------------------------------------------------
+   1	> 0       	100.00%	----		Timing phase completed.
+
+Scheduling completed.
+Starting post-scheduler optimizations on behavior 'debayer_load_input'.
+Completed post-scheduler optimizations on behavior 'debayer_load_input'.
+==============================================================================
+Scheduling behavior: 'debayer_store_output'.
+	Clock = clk  Period = 20000ps
+	Total Ops = 87  Shareable Ops = 11
+	scheduling_effort = low
+	enable_addsubs = false
+	relax_latency = true
+	schedule_slack_margin = -236
+	timing_criticality = auto (medium)
+
+Memory Phase
+Pass 	Slack     	%ops 	Edge         	Action/Status
+------------------------------------------------------------------------------
+   1	N/A       	100.00%	----		Memory phase completed.
+
+Timing Phase
+Pass 	Slack     	%ops 	Edge         	Action/Status
+------------------------------------------------------------------------------
+   1	> 0       	100.00%	----		Timing phase completed.
+
+Scheduling completed.
+WARNING (CTOS-20406):  A user defined state 'Wait_ln859' at ../src/debayer.cpp:859:8 does not contain any scheduled operations and is redundant.
+Starting post-scheduler optimizations on behavior 'debayer_store_output'.
+Completed post-scheduler optimizations on behavior 'debayer_store_output'.
+==============================================================================
+Scheduling behavior: 'interp_G_at_RRR_or_G_at_BBB'.
+	Clock = clk  Period = 20000ps
+	Total Ops = 116  Shareable Ops = 35
+	scheduling_effort = low
+	enable_addsubs = false
+	relax_latency = true
+	schedule_slack_margin = -236
+	timing_criticality = auto (medium)
+
+Memory Phase
+Pass 	Slack     	%ops 	Edge         	Action/Status
+------------------------------------------------------------------------------
+   1	N/A       	100.00%	----		Memory phase completed.
+
+Timing Phase
+Pass 	Slack     	%ops 	Edge         	Action/Status
+------------------------------------------------------------------------------
+   1	> 0       	100.00%	----		Timing phase completed.
+
+Scheduling completed.
+Starting post-scheduler optimizations on behavior 'interp_G_at_RRR_or_G_at_BBB'.
+Completed post-scheduler optimizations on behavior 'interp_G_at_RRR_or_G_at_BBB'.
+------------------------------------------------------------------------------
+Input                          | External Delay  | Setup Delay     | Slack          
+------------------------------------------------------------------------------
+row_in                         | 236             | 8265            | 11499          
+col_in                         | 236             | 6992            | 12772          
+------------------------------------------------------------------------------
+Output                         | External Delay  | Launch Delay    | Slack          
+------------------------------------------------------------------------------
+interp_G_at_RRR_or_G_at_BBB_out | 236             | 510             | 19254          
+------------------------------------------------------------------------------
+
+==============================================================================
+Scheduling behavior: 'interp_R_at_GRB_or_B_at_GBR'.
+	Clock = clk  Period = 20000ps
+	Total Ops = 123  Shareable Ops = 42
+	scheduling_effort = low
+	enable_addsubs = false
+	relax_latency = true
+	schedule_slack_margin = -236
+	timing_criticality = auto (medium)
+
+Memory Phase
+Pass 	Slack     	%ops 	Edge         	Action/Status
+------------------------------------------------------------------------------
+   1	N/A       	100.00%	----		Memory phase completed.
+
+Timing Phase
+Pass 	Slack     	%ops 	Edge         	Action/Status
+------------------------------------------------------------------------------
+   1	> 0       	100.00%	----		Timing phase completed.
+
+Scheduling completed.
+Starting post-scheduler optimizations on behavior 'interp_R_at_GRB_or_B_at_GBR'.
+Completed post-scheduler optimizations on behavior 'interp_R_at_GRB_or_B_at_GBR'.
+------------------------------------------------------------------------------
+Input                          | External Delay  | Setup Delay     | Slack          
+------------------------------------------------------------------------------
+row_in                         | 236             | 8697            | 11067          
+col_in                         | 236             | 7053            | 12711          
+------------------------------------------------------------------------------
+Output                         | External Delay  | Launch Delay    | Slack          
+------------------------------------------------------------------------------
+interp_R_at_GRB_or_B_at_GBR_out | 236             | 510             | 19254          
+------------------------------------------------------------------------------
+
+==============================================================================
+Scheduling behavior: 'interp_R_at_GBR_or_B_at_GRB'.
+	Clock = clk  Period = 20000ps
+	Total Ops = 123  Shareable Ops = 42
+	scheduling_effort = low
+	enable_addsubs = false
+	relax_latency = true
+	schedule_slack_margin = -236
+	timing_criticality = auto (medium)
+
+Memory Phase
+Pass 	Slack     	%ops 	Edge         	Action/Status
+------------------------------------------------------------------------------
+   1	N/A       	100.00%	----		Memory phase completed.
+
+Timing Phase
+Pass 	Slack     	%ops 	Edge         	Action/Status
+------------------------------------------------------------------------------
+   1	> 0       	100.00%	----		Timing phase completed.
+
+Scheduling completed.
+Starting post-scheduler optimizations on behavior 'interp_R_at_GBR_or_B_at_GRB'.
+Completed post-scheduler optimizations on behavior 'interp_R_at_GBR_or_B_at_GRB'.
+------------------------------------------------------------------------------
+Input                          | External Delay  | Setup Delay     | Slack          
+------------------------------------------------------------------------------
+row_in                         | 236             | 7066            | 12698          
+col_in                         | 236             | 7778            | 11986          
+------------------------------------------------------------------------------
+Output                         | External Delay  | Launch Delay    | Slack          
+------------------------------------------------------------------------------
+interp_R_at_GBR_or_B_at_GRB_out | 236             | 510             | 19254          
+------------------------------------------------------------------------------
+
+==============================================================================
+Scheduling behavior: 'interp_R_at_BBB_or_B_at_RRR'.
+	Clock = clk  Period = 20000ps
+	Total Ops = 121  Shareable Ops = 40
+	scheduling_effort = low
+	enable_addsubs = false
+	relax_latency = true
+	schedule_slack_margin = -236
+	timing_criticality = auto (medium)
+
+Memory Phase
+Pass 	Slack     	%ops 	Edge         	Action/Status
+------------------------------------------------------------------------------
+   1	N/A       	100.00%	----		Memory phase completed.
+
+Timing Phase
+Pass 	Slack     	%ops 	Edge         	Action/Status
+------------------------------------------------------------------------------
+   1	> 0       	100.00%	----		Timing phase completed.
+
+Scheduling completed.
+Starting post-scheduler optimizations on behavior 'interp_R_at_BBB_or_B_at_RRR'.
+Completed post-scheduler optimizations on behavior 'interp_R_at_BBB_or_B_at_RRR'.
+------------------------------------------------------------------------------
+Input                          | External Delay  | Setup Delay     | Slack          
+------------------------------------------------------------------------------
+row_in                         | 236             | 9067            | 10697          
+col_in                         | 236             | 8524            | 11240          
+------------------------------------------------------------------------------
+Output                         | External Delay  | Launch Delay    | Slack          
+------------------------------------------------------------------------------
+interp_R_at_BBB_or_B_at_RRR_out | 236             | 510             | 19254          
+------------------------------------------------------------------------------
+
+==============================================================================
+Scheduling behavior: 'debayer_process_debayer'.
+	Clock = clk  Period = 20000ps
+	Total Ops = 233  Shareable Ops = 86
+	scheduling_effort = low
+	enable_addsubs = false
+	relax_latency = true
+	schedule_slack_margin = -236
+	timing_criticality = auto (medium)
+
+Memory Phase
+Pass 	Slack     	%ops 	Edge         	Action/Status
+------------------------------------------------------------------------------
+   1	N/A       	100.00%	----		Memory phase completed.
+
+Timing Phase
+Pass 	Slack     	%ops 	Edge         	Action/Status
+------------------------------------------------------------------------------
+   1	> 0       	100.00%	----		Timing phase completed.
+
+Scheduling completed.
+WARNING (CTOS-20406):  A user defined state 'Wait_ln775' at ../src/debayer.cpp:775:8 does not contain any scheduled operations and is redundant.
+Starting post-scheduler optimizations on behavior 'debayer_process_debayer'.
+Completed post-scheduler optimizations on behavior 'debayer_process_debayer'.
+Creating register bindings for 42 values in behavior 'debayer_config_debayer'.
+Created 3 register bindings in behavior 'debayer_config_debayer'.
+Creating register bindings for 698 values in behavior 'debayer_load_input'.
+Created 2384 register bindings in behavior 'debayer_load_input'.
+Creating register bindings for 418 values in behavior 'debayer_store_output'.
+Created 1099 register bindings in behavior 'debayer_store_output'.
+Creating register bindings for 432 values in behavior 'interp_G_at_RRR_or_G_at_BBB'.
+Created 551 register bindings in behavior 'interp_G_at_RRR_or_G_at_BBB'.
+Creating register bindings for 519 values in behavior 'interp_R_at_GRB_or_B_at_GBR'.
+Created 834 register bindings in behavior 'interp_R_at_GRB_or_B_at_GBR'.
+Creating register bindings for 519 values in behavior 'interp_R_at_GBR_or_B_at_GRB'.
+Created 737 register bindings in behavior 'interp_R_at_GBR_or_B_at_GRB'.
+Creating register bindings for 508 values in behavior 'interp_R_at_BBB_or_B_at_RRR'.
+Created 594 register bindings in behavior 'interp_R_at_BBB_or_B_at_RRR'.
+Creating register bindings for 1608 values in behavior 'debayer_process_debayer'.
+Created 8841 register bindings in behavior 'debayer_process_debayer'.
+Behavior 'debayer_config_debayer' contains 3 state, 0 tag, 33 output, and 0 data registers.
+Behavior 'debayer_load_input' contains 18 state, 0 tag, 67 output, and 320 data registers.
+Behavior 'debayer_store_output' contains 12 state, 1 tag, 116 output, and 108 data registers.
+Behavior 'debayer_process_debayer' contains 49 state, 2 tag, 2 output, and 753 data registers.
+Behavior 'interp_G_at_RRR_or_G_at_BBB' contains 9 state, 0 tag, 0 output, and 209 data registers.
+Behavior 'interp_R_at_GRB_or_B_at_GBR' contains 11 state, 0 tag, 0 output, and 248 data registers.
+Behavior 'interp_R_at_GBR_or_B_at_GRB' contains 11 state, 0 tag, 0 output, and 240 data registers.
+Behavior 'interp_R_at_BBB_or_B_at_RRR' contains 9 state, 0 tag, 0 output, and 210 data registers.
+Netlisting module 'debayer'.
+Adding reset to output register for 'rd_request'.
+Adding reset to output register for 'wr_request'.
+Adding reset to output register for 'bufdout_data'.
+Writing Final Verilog Simulation Model:
+write_sim -type verilog -suffix _final -dir ./model_unisim /designs/debayer_unisim/modules/debayer.

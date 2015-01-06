@@ -1,0 +1,4 @@
+../input/0000.bin
+../input/0001.bin
+../input/0002.bin
+../input/0003.bin

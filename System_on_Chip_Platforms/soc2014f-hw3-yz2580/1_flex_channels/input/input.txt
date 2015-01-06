@@ -1,0 +1,7 @@
+10
+11
+4
+../input/dog.bin
+../input/duck.bin
+../input/maple.bin
+../input/tiger.bin

@@ -1,0 +1,1 @@
+../../1_flex_channels/src/wami_params.h
